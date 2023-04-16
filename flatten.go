@@ -1,7 +1,7 @@
 package main
 
 import (
-	"encoding/json"
+  "encoding/json"
   "errors"
   "fmt"
   "github.com/clevandowski/yamltool"
@@ -177,14 +177,14 @@ func Flatten(data string) (string, error) {
 
 func main() {
   stdin, err := io.ReadAll(os.Stdin)
-	if err != nil {
-		panic(err)
-	}
+  if err != nil {
+    panic(err)
+  }
 
   data := string(stdin)
   flatten, err := Flatten(data)
   if err != nil {
-		panic(err)
+    panic(err)
   }
   fmt.Printf("%v", flatten)
 }
